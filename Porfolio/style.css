@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Chettan 2";
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /* border-style: dashed; 
+    border-color: red; */
+}
+
+body {
+    background: #67257a
+        /* min-height: 200vh; */
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: salmon;
+}
+
+/* --------------------------------- NAV --------------------------------- */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+header.sticky {
+    padding: 5px 100px;
+    background: #fff;
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+header ul li a:hover,
+header.sticky ul li a:hover {
+    color: #30b6c0;
+}
+
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: #000;
+}
+
+/* --------------------------------- SECTION --------------------------------- */
+/* ---------------------------- SECTION - BANNIER --------------------------- */
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+}
+
+section img.fond {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bannier h1 {
+    font-size: 7em;
+    left: 2ch;
+    top: 3.5ch;
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+
+}
+
+.bannier p {
+    font-size: 2.7em;
+    left: 5.5ch;
+    top: 15ch;
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+}
+
+.bannier a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    position: relative;
+    font-size: 1.5em;
+    left: 45ch;
+    top: 20ch;
+    z-index: 2;
+}
+
+.bannier img.moi {
+    width: 20%;
+    position: relative;
+    left: 25cm;
+    top: 6cm;
+    z-index: 2;
+
+}
+
+/* ---------------------------- SECTION - ETUDES --------------------------- */
+
+
+section#etudes::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: -100px;
+    background: linear-gradient(transparent, #010a3e);
+    z-index: 2;
+}
+
+section#etudes {
+    position: relative;
+    background: #010a3e;
+    min-height: 100vh;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.etude h1 {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #df1256;
+    right: 100px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    animation: animate 3s ease-in-out infinite;
+}
+
+@keyframes animate {
+    from {
+        text-shadow: 0 0 9px #df1256;
+    }
+
+    to {
+        text-shadow: 0 0 7px #df1256;
+    }
+}
+
+/* Voir comment possiblement améliorer(Cercle déco) */
+section.etude::after {
+    content: '';
+    position: absolute;
+    font-size: large;
+    background-size: 100%;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#ffc107, #e91e63);
+    border-radius: 50%;
+    transform: translate(-250px, -120px);
+}
+
+.box {
+    position: relative;
+    min-width: 1250px;
+    /*taille de la box longueur*/
+    min-height: 300px;
+    /*taille de la box largeur*/
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    z-index: 10;
+    padding: 20px;
+    backdrop-filter: blur(25px);
+}
+
+.box h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.box .list {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.box .list:hover {
+    background: #fff;
+    box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
+    transform: scale(1.15) translateX(30px) translateY(-15px);
+    z-index: 1000;
+}
+
+.box .list .imgBx {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.box .list .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box .list .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+
+.box .list .content .date {
+    position: absolute;
+    right: -500px;
+    color: #03a9f4;
+    transition: 0.5s;
+    font-size: 2em;
+}
+
+.box .list .content .date small {
+    font-weight: 500;
+    opacity: 0.25;
+}
+
+.box .list:hover .content .date {
+    right: 20px;
+}
+
+.box .list .content h4 {
+    line-height: 1.2em;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.box .list .content p {
+    line-height: 0.75em;
+    transition: 0.5s;
+}
+
+.box .list:hover .content h4,
+.box .list:hover .content p {
+    color: #333;
+}
+
+/* ---------------------------- SECTION - PROJETS --------------------------- */
+section#projets {
+    background: linear-gradient(#010a3e, salmon);
+}
+
+#projets h1 {
+    position: absolute;
+    font-size: 4rem;
+    font-weight: 900;
+    top: 90px;
+    left: 25px;
+    color: #df1256;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    animation: animate 3s ease-in-out infinite;
+}
+
+.radio {
+    display: none;
+}
+
+.container {
+    position: relative;
+    width: 70%;
+    top: 80px;
+    margin: auto;
+}
+
+.slider {
+    width: 100%;
+    position: absolute;
+    height: 0;
+    padding-bottom: 56.25%;
+    background: #141414;
+    overflow: hidden;
+    border: solid 1px #2e2e2e;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: 1.3s;
+}
+
+.titre {
+    position: absolute;
+    width: 100%;
+    left: 5%;
+    top: 5%;
+    top: -100%;
+    color: #ffeb3b;
+    font-weight: 900;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    line-height: 50px;
+    transition: 0.9s;
+}
+
+
+
+.dots {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots label {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    margin: 0 10px;
+    border-radius: 50%;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.dots label:hover {
+    opacity: 0.7;
+}
+
+#radio-1:checked~#slide-1,
+#radio-2:checked~#slide-2,
+#radio-3:checked~#slide-3 {
+    opacity: 1;
+}
+
+#radio-1:checked~#slide-1 img,
+#radio-2:checked~#slide-2 img,
+#radio-3:checked~#slide-3 img {
+    transform: scale(1);
+}
+
+#radio-1:checked~#slide-1 .titre,
+#radio-2:checked~#slide-2 .titre,
+#radio-3:checked~#slide-3 .titre {
+    opacity: 1;
+    top: 7%;
+    font-size: 80px;
+}
+
+#radio-1:checked~.dots #label-1,
+#radio-2:checked~.dots #label-2,
+#radio-3:checked~.dots #label-3 {
+    background: #fff;
+    opacity: 1;
+}
+
+/* ---------------------------- SECTION - VEILLE --------------------------- */
+section#veille {
+    background: linear-gradient(salmon, #e91e63);
+    width: 100%;
+}
+
+#veille h1 {
+
+    padding: 70px;
+    font-size: 5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*Bouton info*/
+#veille .btn {
+    position: absolute;
+    background: #fff;
+    height: 60px;
+    width: 60px;
+    top: 75px;
+    left: 1300px;
+    border-radius: 100px;
+    border-style: none;
+    cursor: pointer;
+    /* box-shadow: 0 4px 4px rgba(0, 0, 0, .3) ; */ /*a possiblement rajouter/resoudre plus tard*/
+    animation: pulse 2.45s linear infinite;
+}
+
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
+    }
+
+    to {
+        box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.0);
+    }
+}
+
+.btn:hover {
+    animation: none !important;
+    box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.3);
+}
+
+.btn.active {
+    animation: none !important;
+    background: blue
+  }
+
+/*Fin bouton info*/
+.cadre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Calendrier Début/Fin*/
+
+
+.calendrier {
+    width: 300px;
+    height: 250px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 250px;
+    /*pour séparer les dates entre-elles (à ajuster)*/
+}
+
+.gauche,
+.droite {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 24px;
+}
+
+.droite {
+    width: 42%;
+    background: #f4351e;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.gauche {
+    width: 58%;
+}
+/*Fin Calendrier Début/Fin*/
+/*slider vertical*/
+.wrapper .outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper .card{
+    background: #fff;
+    width: 430px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    justify-content: space-between;
+    border-radius: 100px 20px 20px 100px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    animation: defil 15s linear infinite;
+    animation-delay: calc(3s * var(--delay));
+  }
+  .outer:hover .card{
+    animation-play-state: paused;
+  }
+  .wrapper .card:last-child{
+    animation-delay: calc(-3s * var(--delay));
+  }
+  @keyframes defil {
+    0%{
+      opacity: 0;
+      transform: translateY(100%) scale(0.5);
+    }
+    5%, 20%{
+      opacity: 0.4;
+      transform: translateY(100%) scale(0.7);
+    }
+    25%, 40%{
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0%) scale(1);
+    }
+    45%, 60%{
+      opacity: 0.4;
+      transform: translateY(-100%) scale(0.7);
+    }
+    65%, 100%{
+      opacity: 0;
+      transform: translateY(-100%) scale(0.5);
+    }
+  }
+  .card .content{
+    display: flex;
+    align-items: center;
+  }
+  .wrapper .card .img{
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top:15px;
+    left: 2px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  }
+  .card .img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .card .details{
+    margin-left: 80px;
+  }
+  .details span{
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .card a{
+    text-decoration: none;
+    padding: 7px 18px;
+    border-radius: 25px;
+    color: #fff;
+    background: linear-gradient(to bottom, #F57500 0%, #3f3f44 100%);
+    transition: all 0.3s ease;
+  }
+  .card a:hover{
+    transform: scale(0.94);
+  }
+  /* Fin slider vertical*/

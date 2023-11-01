@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Leny | Portfolio - BTS SIO </title>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Willo...</a>
+        <ul class="navbar">
+            <li><a href="#accueil" class="active">Accuel</a></li>
+            <li><a href="#etudes">Études</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#veille">Veille Technologique</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <section id="accueil" class="bannier">
+        <img src="img/fond.png" alt="fond" class="fond">
+        <h1>BONJOUR</h1>
+        <p>Bienvenue sur mon Portfolio<br>donc ça c'est fait main</p>
+
+        <a href="ressources/CV_Lény.G.pdf">Mon CV</a>
+        <img src="img/hi-removebg-preview.png" alt="moi" class="moi">
+    </section>
+
+    <section id="etudes" class="etude">
+        <h1>ETUDES</h1>
+        <div class="box">
+            <h3>CURSUS SCOLAIRE</h3>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="img/Lycee_Leonard.jpg">
+                </div>
+                <div class="content">
+                    <h2 class="date"><small>Depuis </small>2022</h2>
+                    <h4>BREVET TECHNICIEN SUPÉRIEUR EN SERVICES INFORMATIQUES AUX ORGANISATIONS (BTS SIO)</h4>
+                    <p>LYCÉE LÉONARD DE VINCI</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="img/Lycee_Simone.jpg">
+                </div>
+                <div class="content">
+                    <h2 class="date"><small>De </small>2020 <small>à</small> 2022</h2>
+                    <h4>BACCALAURÉAT EN MÉTIER DE L'ÉLECTRICITÉ ET DE CES ENVIRONNEMENTS CONNECTÉS (MELEC)</h4>
+                    <p> LYCÉE POLYVALENT SIMONE VEIL</p>
+                </div>
+            </div>
+            <h3>EXPERIENCES / STAGES PROFESSIONNEL</h3>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="img/Omac.jpg">
+                </div>
+                <div class="content">
+                    <h2 class="date"><small>De Mai </small>2023 <small>à Juin</small> 2023</h2>
+                    <h4>STAGE INFORMATICIEN (BTS SIO)</h4>
+                    <p>OFFICE MUNICIPAL D'ANIMATION DE LA CITÉ (OMAC)</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="img/Lycee_Leonard.jpg"> <!--changer la photo !!!-->
+                </div>
+                <div class="content">
+                    <h2 class="date"><small>De Novembre </small>2021 <small>à Janvier</small> 2022</h2>
+                    <h4>STAGE ELECTROTECHNITIEN (MELEC)</h4>
+                    <p>TERELEC</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="img/Logo_stage.jpg">
+                </div>
+                <div class="content">
+                    <h2 class="date"><small>De Janvier </small>2021 <small>à Mars</small> 2021</h2>
+                    <h4>STAGE ELECTROTECHNITIEN (MELEC)</h4>
+                    <p>ALLIANCE SYSTEMS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projets">
+        <h1>PROJETS</h1>
+
+        <div class="container">
+            <div class="slider">
+
+                <input type="radio" class="radio" name="image" id="radio-1" checked>
+                <input type="radio" class="radio" name="image" id="radio-2">
+                <input type="radio" class="radio" name="image" id="radio-3">
+
+                <div class="slide" id="slide-1">
+                    <img src="img/Desert_large.jpg" alt="">
+                    <div class="titre">Virtual Landscape</div>
+                    <!--essaye de rajouter un lien (a) sur chaque image ou texte-->
+                </div>
+                <div class="slide" id="slide-2">
+                    <img src="img/fond.png" alt="">
+                    <div class="titre">P o r t f o l i o</div>
+                </div>
+                <div class="slide" id="slide-3">
+                    <img src="img/Desert_large.jpg" alt="">
+                    <div class="titre">Fond d'ecran</div>
+                </div>
+                <div class="dots">
+                    <label for="radio-1" id="label-1"></label>
+                    <label for="radio-2" id="label-2"></label>
+                    <label for="radio-3" id="label-3"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="veille">
+        <h1>VEILLE TECHNOLOGIQUE</h1>
+        <button class="btn">i</button>        <!-- <p>La veille technologique consiste à s'informer en continu sur les nouveautés du secteur informatique, les inventions des concurrents ainsi que les nouvelles technologies et ce dans le but d'être le meilleur dans son domaine.</p> -->
+        <div class="cadre">
+            <div class="calendrier">
+                <div class="gauche">
+                    <p>Création de</p>
+                    <p>Near</p>
+                </div>
+                <div class="droite">
+                    <p>Août</p>
+                    <p>2018</p>
+                </div>
+            </div>
+
+            <!-- slider vertical -->
+
+            <div class="wrapper">
+                <div class="outer">
+                  <div class="card" style="--delay:-1;">
+                    <div class="contenu">
+                      <div class="img"><img src="img/slide_vertical-1.PNG" alt=""></div>
+                      <div class="details">
+                        <span class="name">Web 3.0</span>
+                        <p>Ou sommes-nous dans l'histiore d'internet?</p>
+                      </div>
+                    </div>
+                    <a href="https://www.emarketerz.fr/web3-definition/">Go</a>
+                  </div>
+                  <div class="card" style="--delay:0;">
+                    <div class="contenu">
+                      <div class="img"><img src="img/slide_vertical0.PNG" alt=""></div>
+                      <div class="details">
+                        <span class="name">Qu'est-ce que NEAR ?</span>
+                        <p>Son rapport avec Web3.0 et ces Objectifs</p>
+                      </div>
+                    </div>
+                    <a href="https://www.meria.com/blog/article/near">Go</a>
+                  </div>
+                  <div class="card" style="--delay:1;">
+                    <div class="contenu">
+                      <div class="img"><img src="img/slide_vertical1.PNG" alt=""></div>
+                      <div class="details">
+                        <span class="name">L'avenir de Near</span>
+                        <p>Mise à jour de la feuille de route (Anglais)</p>
+                      </div>
+                    </div>
+                    <a href="https://near.org/blog/near-q2-protocol-roadmap-update">Go</a>
+                  </div>
+                  <div class="card" style="--delay:2;">
+                    <div class="contenu">
+                      <div class="img"><img src="img/slide_vertical1.PNG" alt=""></div>
+                      <div class="details">
+                        <span class="name">Near & reddit</span>
+                        <p>Les dernieres infos, avis et Guide fait par ces utilisateurs 
+                            (Anglais)
+                        </p>
+                      </div>
+                    </div>
+                    <a href="https://www.reddit.com/r/nearprotocol/">Go</a>
+                  </div>
+                  <div class="card" style="--delay:2;">
+                    <div class="contenu">
+                      <div class="img"><img src="img/slide_vertical2.PNG" alt=""></div>
+                      <div class="details">
+                        <span class="name">Near finance</span>
+                        <p>Que vaut l'économie en cryptomonnaie de cette plateforme</p>
+                      </div>
+                    </div>
+                    <a href="https://coinmarketcap.com/fr/currencies/near-protocol/">Go</a>
+                  </div>
+                </div>
+              </div>
+
+              <!--Fin slider vertical -->
+
+            <div class="calendrier">
+                <div class="gauche">
+                    <p>A</p>
+                    <p>ce jour</p>
+                </div>
+                <div class="droite">
+                    <p>Mai</p>
+                    <p>2024</p>
+                </div>
+            </div>
+        </div>
+        
+
+    </section>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
